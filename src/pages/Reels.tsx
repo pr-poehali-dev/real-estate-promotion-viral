@@ -250,7 +250,7 @@ export default function Reels() {
         <div className="container flex items-center justify-between h-16">
           <a href="/" className="flex items-center gap-2 font-display text-xl font-bold text-muted-foreground hover:text-foreground transition-colors">
             <Icon name="ArrowLeft" size={18} />
-            ЭСТЕЙТ<span className="text-gold">.</span>
+            УМНАЯ<span className="text-gold"> ИПОТЕКА</span>
           </a>
           <div className="flex items-center gap-2">
             <Icon name="Clapperboard" className="text-gold" size={22} />

@@ -66,8 +66,8 @@ export default function Index() {
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border">
         <div className="container flex items-center justify-between h-16">
           <a href="#" className="flex items-center gap-2 font-display text-xl font-bold tracking-wide">
-            <Icon name="Diamond" className="text-gold" size={22} />
-            ЭСТЕЙТ<span className="text-gold">.</span>
+            <Icon name="BrainCircuit" className="text-gold" size={22} />
+            УМНАЯ<span className="text-gold"> ИПОТЕКА</span>
           </a>
           <nav className="hidden lg:flex items-center gap-7 text-sm text-muted-foreground">
             {NAV.map((n) => (
@@ -313,10 +313,10 @@ export default function Index() {
       <footer className="border-t border-border py-10">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-2 font-display text-lg font-bold text-foreground">
-            <Icon name="Diamond" className="text-gold" size={18} />
-            ЭСТЕЙТ<span className="text-gold">.</span>
+            <Icon name="BrainCircuit" className="text-gold" size={18} />
+            УМНАЯ<span className="text-gold"> ИПОТЕКА</span>
           </div>
-          <span>© 2026 Агентство недвижимости. Все права защищены.</span>
+          <span>© 2026 Умная ипотека. Все права защищены.</span>
         </div>
       </footer>
     </div>
