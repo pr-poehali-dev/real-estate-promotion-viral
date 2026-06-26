@@ -49,9 +49,12 @@ const STATS = [
 ];
 
 const OBJECTS = [
-  { tag: 'Новостройка', title: 'ЖК «Изумрудный квартал»', meta: '1–3 комн · от 6,2 млн ₽' },
-  { tag: 'Вторичка', title: '2-комн. в центре', meta: '64 м² · 8,9 млн ₽' },
-  { tag: 'Выкуп', title: 'Срочный выкуп доли', meta: 'Оценка за 30 минут' },
+  { tag: 'Новостройка', title: 'ЖК «Казань Сити»', meta: 'Казань · 1–3 комн · от 5,8 млн ₽' },
+  { tag: 'Новостройка', title: 'ЖК «Лазурные небеса»', meta: 'Иннополис · от 4,9 млн ₽' },
+  { tag: 'Вторичка', title: '2-комн. на Проспекте Победы', meta: 'Казань · 58 м² · 7,4 млн ₽' },
+  { tag: 'Вторичка', title: '3-комн. в Зеленодольске', meta: '74 м² · 4,2 млн ₽' },
+  { tag: 'Загородный дом', title: 'Дом в Лаишевском районе', meta: '120 м², 6 сот · 8,1 млн ₽' },
+  { tag: 'Выкуп', title: 'Срочный выкуп по РТ', meta: 'Казань и область · оценка за 30 мин' },
 ];
 
 export default function Index() {
@@ -210,9 +213,10 @@ export default function Index() {
       <section id="objects" className="py-24">
         <div className="container">
           <span className="text-gold text-sm font-semibold uppercase tracking-widest">Объекты</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold uppercase mt-2 mb-12">
+          <h2 className="font-display text-4xl md:text-5xl font-bold uppercase mt-2 mb-4">
             Новостройки и вторичный рынок
           </h2>
+          <p className="text-muted-foreground mb-12">Казань, Иннополис, Зеленодольск, Лаишево и вся Республика Татарстан</p>
           <div className="grid md:grid-cols-3 gap-5">
             {OBJECTS.map((o) => (
               <div
@@ -256,7 +260,7 @@ export default function Index() {
               </div>
               <div className="flex items-center gap-3">
                 <Icon name="MapPin" className="text-gold" size={20} />
-                <span>Москва, ул. Примерная, 1</span>
+                <span>Казань и Республика Татарстан</span>
               </div>
             </div>
           </div>
