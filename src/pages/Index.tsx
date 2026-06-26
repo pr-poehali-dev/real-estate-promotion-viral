@@ -248,7 +248,7 @@ export default function Index() {
             <div className="mt-8 space-y-4">
               <div className="flex items-center gap-3">
                 <Icon name="Phone" className="text-gold" size={20} />
-                <span className="font-semibold">8 (937) 588-85-78</span>
+                <a href="tel:+79375888578" className="font-semibold hover:text-gold transition-colors">8 (937) 588-85-78</a>
               </div>
               <div className="flex items-center gap-3">
                 <Icon name="Mail" className="text-gold" size={20} />
