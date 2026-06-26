@@ -73,9 +73,15 @@ export default function Index() {
               </a>
             ))}
           </nav>
-          <Button asChild className="bg-gold text-accent-foreground hover:bg-gold/90 font-semibold">
-            <a href="#contacts">Консультация</a>
-          </Button>
+          <div className="flex items-center gap-3">
+            <a href="/reels" className="hidden md:flex items-center gap-1.5 text-sm text-muted-foreground hover:text-gold transition-colors">
+              <Icon name="Clapperboard" size={16} />
+              Рилс
+            </a>
+            <Button asChild className="bg-gold text-accent-foreground hover:bg-gold/90 font-semibold">
+              <a href="#contacts">Консультация</a>
+            </Button>
+          </div>
         </div>
       </header>
 
