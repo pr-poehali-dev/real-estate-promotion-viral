@@ -256,7 +256,7 @@ export default function Index() {
               </div>
               <div className="flex items-center gap-3">
                 <Icon name="Mail" className="text-gold" size={20} />
-                <span>ipotekanam@gmail.com</span>
+                <a href="mailto:ipotekanam@gmail.com" className="hover:text-gold transition-colors">ipotekanam@gmail.com</a>
               </div>
               <div className="flex items-center gap-3">
                 <Icon name="MapPin" className="text-gold" size={20} />
