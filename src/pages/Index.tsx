@@ -248,7 +248,7 @@ export default function Index() {
             <div className="mt-8 space-y-4">
               <div className="flex items-center gap-3">
                 <Icon name="Phone" className="text-gold" size={20} />
-                <span className="font-semibold">+7 (900) 000-00-00</span>
+                <span className="font-semibold">8 (937) 588-85-78</span>
               </div>
               <div className="flex items-center gap-3">
                 <Icon name="Mail" className="text-gold" size={20} />
