@@ -49,12 +49,48 @@ const STATS = [
 ];
 
 const OBJECTS = [
-  { tag: 'Новостройка', title: 'ЖК «Казань Сити»', meta: 'Казань · 1–3 комн · от 5,8 млн ₽' },
-  { tag: 'Новостройка', title: 'ЖК «Лазурные небеса»', meta: 'Иннополис · от 4,9 млн ₽' },
-  { tag: 'Вторичка', title: '2-комн. на Проспекте Победы', meta: 'Казань · 58 м² · 7,4 млн ₽' },
-  { tag: 'Вторичка', title: '3-комн. в Зеленодольске', meta: '74 м² · 4,2 млн ₽' },
-  { tag: 'Загородный дом', title: 'Дом в Лаишевском районе', meta: '120 м², 6 сот · 8,1 млн ₽' },
-  { tag: 'Выкуп', title: 'Срочный выкуп по РТ', meta: 'Казань и область · оценка за 30 мин' },
+  {
+    tag: 'Новостройка',
+    title: 'ЖК «Парк Маяк»',
+    meta: 'Суварстроит · Приволжский р-н · от 8,6 млн ₽',
+    badge: 'Семейная ипотека 6%',
+    desc: '87 га · принцип «всё включено» · взнос от 20%',
+  },
+  {
+    tag: 'Новостройка',
+    title: 'ЖК «Малевич»',
+    meta: 'ул. Аделя Кутуя · Вахитовский р-н · бизнес-класс',
+    badge: 'Траншевая ипотека',
+    desc: 'Центр Казани · сдача 2028 · взнос от 20%',
+  },
+  {
+    tag: 'Новостройка',
+    title: 'ЖК «GloraX Урицкого»',
+    meta: 'GloraX · Советский р-н · рассрочка до 2028',
+    badge: 'Взнос от 20%',
+    desc: 'Рассрочка без удорожания · ИТ-ипотека · сдача 2027',
+  },
+  {
+    tag: 'Новостройка',
+    title: 'ЖК «Мифы»',
+    meta: 'Ак Барс Дом · ул. Аэропортовская · Авиастроительный р-н',
+    badge: 'Семейная ипотека',
+    desc: 'Лидер «Казаныш 2025» · взнос от 20% · строится',
+  },
+  {
+    tag: 'Новостройка',
+    title: 'ЖК «Времена года»',
+    meta: 'Суварстроит · Ново-Савиновский р-н · бизнес-класс',
+    badge: 'ИТ-ипотека',
+    desc: 'В окружении леса · от 5 млн ₽ · семейная от 6%',
+  },
+  {
+    tag: 'Новостройка',
+    title: 'ЖК «Унай»',
+    meta: 'Унистрой · Приволжский р-н · от 5 млн ₽',
+    badge: 'Скидка 10%',
+    desc: 'Семейная ипотека · Сбербанк · взнос от 20%',
+  },
 ];
 
 export default function Index() {
@@ -221,15 +257,23 @@ export default function Index() {
             {OBJECTS.map((o) => (
               <div
                 key={o.title}
-                className="rounded-2xl border border-border bg-card overflow-hidden hover:border-gold/50 transition-all"
+                className="rounded-2xl border border-border bg-card overflow-hidden hover:border-gold/50 transition-all hover:-translate-y-1 group"
               >
-                <div className="h-44 bg-gradient-to-br from-secondary to-card flex items-center justify-center">
-                  <Icon name="Building2" className="text-gold/40" size={56} />
+                <div className="h-36 bg-gradient-to-br from-secondary to-card flex items-center justify-center relative">
+                  <Icon name="Building2" className="text-gold/30" size={52} />
+                  {'badge' in o && (
+                    <span className="absolute top-3 left-3 bg-gold text-accent-foreground text-xs font-bold px-2.5 py-1 rounded-lg">
+                      {o.badge}
+                    </span>
+                  )}
                 </div>
                 <div className="p-6">
                   <span className="text-xs font-semibold text-gold uppercase tracking-wider">{o.tag}</span>
-                  <h3 className="font-display text-xl font-semibold mt-2">{o.title}</h3>
+                  <h3 className="font-display text-lg font-semibold mt-1 leading-tight">{o.title}</h3>
                   <p className="text-sm text-muted-foreground mt-1">{o.meta}</p>
+                  {'desc' in o && (
+                    <p className="text-xs text-muted-foreground mt-2 pt-2 border-t border-border">{o.desc}</p>
+                  )}
                 </div>
               </div>
             ))}
